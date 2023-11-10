@@ -2,7 +2,7 @@ import type { Config } from "tailwindcss";
 
 const config: Config = {
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/containers/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
@@ -13,8 +13,10 @@ const config: Config = {
       },
       colors: {
         primary: "#1B4B66",
+        lightGrayish: "#1e1e1e1f",
         veryLightGray: "#DEDEDEB3",
         lightGray: "#F1F1F1",
+        gray: "#F0F0F0",
         darkGray: "#626262",
         veryDarkGray: "#B6B6B6",
         darkishGray: "#C4C4C4FF",

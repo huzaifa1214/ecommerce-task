@@ -15,7 +15,9 @@ const Header = () => {
   return (
     <nav className="container relative mx-auto xs:px-0 sm:px-6 py-6 flex justify-between items-center">
       <div className="flex">
-        <Image src="/img/Logo.svg" alt="logo" width={108} height={22} />
+        <Link href="/">
+          <Image src="/img/Logo.svg" alt="logo" width={108} height={22} />
+        </Link>
         <div className="hidden md:flex gap-5 ml-8">
           {HeaderLinks.map((headerLink, index) => (
             <Link key={index} href={headerLink.path} className="text-sm">

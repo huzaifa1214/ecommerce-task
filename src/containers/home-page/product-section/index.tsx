@@ -6,6 +6,8 @@ import ProductCard from "@/components/Cards/ProductCard";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { responsive } from "@/containers/home-page/product-section/constants";
+import Link from "next/link";
+import Loading from "@/components/Loading";
 
 const ProductSection = () => {
   const [products, setProducts] = useState<Product[]>([]);
@@ -31,9 +33,7 @@ const ProductSection = () => {
     <div className="container mx-auto p-6 mb-12">
       <p className="text-3.5xl font-semibold mb-5">New Arrivals</p>
       {loading ? (
-        <div className="flex justify-center items-center h-40">
-          <span className="text-4xl font-medium text-darkGray">Loading...</span>
-        </div>
+        <Loading className="h-60" />
       ) : (
         <Carousel
           swipeable={false}
@@ -51,7 +51,9 @@ const ProductSection = () => {
           itemClass="carousel-item-padding-40-px"
         >
           {products.map((product) => (
-            <ProductCard key={product.id} product={product} />
+            <Link href={`/product/${product.id}`} key={product.id}>
+              <ProductCard product={product} />
+            </Link>
           ))}
         </Carousel>
       )}

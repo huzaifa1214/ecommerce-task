@@ -18,7 +18,11 @@ const HeroSection = () => {
         <p className="text-primary xs:text-sm sm:text-base md:text-xl lg:text-2.5xl font-medium md:mt-2 lg:mt-4 mb-2 md:mb-4 lg:mb-8 md:leading-9">
           Trendy handbags collection for your party animal
         </p>
-        <PrimaryButton buttonText="See more" iconPath="/img/arrow.svg" />
+        <PrimaryButton
+          buttonText="See more"
+          iconPath="/img/arrow.svg"
+          className="text-white"
+        />
       </div>
     </div>
   );

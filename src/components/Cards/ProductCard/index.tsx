@@ -6,7 +6,7 @@ const ProductCard = ({ product }: { product: Product }) => {
 
   return (
     <div className="flex flex-col pr-10">
-      <div className="relative h-70 w-full rounded-lg">
+      <div className="relative h-70 w-full">
         <Image
           alt="product-img"
           src={images[0]}

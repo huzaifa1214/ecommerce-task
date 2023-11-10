@@ -13,8 +13,6 @@ interface PrimaryButtonProps {
 
 const PrimaryButton: FC<PrimaryButtonProps> = ({
   buttonText,
-  buttonWidth = "44",
-  bgColor = "bg-primary",
   iconPath = "",
   onClick,
   type,
@@ -24,7 +22,7 @@ const PrimaryButton: FC<PrimaryButtonProps> = ({
     <button
       onClick={onClick}
       type={type}
-      className={`flex items-center justify-center gap-2 rounded-lg text-white py-1 sm:py-2 md:py-3 ${bgColor} w-36 md:w-${buttonWidth} ${className}`}
+      className={`flex items-center justify-center gap-2 rounded-lg py-1 sm:py-2 md:py-3 bg-primary w-36 md:w-44 ${className}`}
     >
       {iconPath && (
         <Image alt="button-icon" src={iconPath} height={24} width={24} />
